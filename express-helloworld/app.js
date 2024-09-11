@@ -1,10 +1,10 @@
-...output omitted...
-var response;
+var express = require('express');
+app = express();
 
 app.get('/', function (req, res) {
-    response = 'This is version 3 of the app.' + '\n';
+  res.send('Hello World! This is a new version 1\n');
+});
 
-    //send the response to the client
-    res.send(response);
-
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!');
 });
